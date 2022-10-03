@@ -10,28 +10,29 @@ Let’s go ahead and create a simple REST API that performs all CRUD operations-
 
 Open the db.json file and replace the content with the following:
 
-{
-	“users”: [
-				{
-				“id”: 1,
-				“firstName”: “Sachin”,
-				“lastName”: “Tendulkar”,
-				“age”: 45
-				},
-				{
-				“id”: 2,
-				“firstName”: “Alastair”,
-				“lastName”: “Cook”,
-				“age”: 37
-				},
-				{
-				“id”: 3,
-				“firstName”: “Steve”,
-				“lastName”: “Smith”,
-				“age”: 32
-				}
-			]
-}
+	{
+		users”: [
+					{
+						“id”: 1,
+						“firstName”: “Sachin”,
+						“lastName”: “Tendulkar”,
+						“age”: 45
+					},
+					{
+						“id”: 2,
+						“firstName”: “Alastair”,
+						“lastName”: “Cook”,
+						“age”: 37
+					},
+					{
+						“id”: 3,
+						“firstName”: “Steve”,
+						“lastName”: “Smith”,
+						“age”: 32
+					}
+		]
+	}
+	
 
 Refresh the browser window where your local server is running. You should see only one resource: users with a count of 3.
 
