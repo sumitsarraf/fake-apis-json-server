@@ -6,7 +6,9 @@ When you hit http://localhost:3000,
 
 Let’s go ahead and create a simple REST API that performs all CRUD operations-GET/POST/PUT/DELETE
 
-GET
+# GET
+
+
 Open the db.json file and replace the content with the following:
 {
 	“users”: [
