@@ -8,7 +8,6 @@ Let’s go ahead and create a simple REST API that performs all CRUD operations-
 
 # GET
 
-
 Open the db.json file and replace the content with the following:
 
 {
@@ -45,3 +44,59 @@ You can also perform operations such as sorting, filtering, searching, etc. Belo
 * http://localhost:3000/users?_sort=firstName&_order=desc (Sorts the records with the first name in descending order)
 * http://localhost:3000/users?age_gte=40 (Returns the users whose age ≥40). Similarly you can set for age_lte and age_gte&age_lte
 * http://localhost:3000/users?q=Sachin (Returns the users which contain the string “Sachin”)
+
+
+
+
+
+# POST
+
+Let’s add one new user to the users request.
+Open a new tab in Postman and run the query (http://localhost:3000/users) with the POST operation. 
+You need to set the header: Content-Type as application/json. 
+In the body, select the body type as raw and add the following content:
+
+	{
+		“id”:4,
+		“firstName”:”Rohit”,
+		“lastName”:”Sharma”,
+		“age”:32
+	}
+
+If you make a GET call, you should see 4 users now.
+
+#PUT
+
+Let’s modify the record with id 1
+Open a new tab in Postman and run the query (http://localhost:3000/users/1) with the PUT operation. 
+You need to set the header: Content-Type as application/json. 
+In the body, select the body type as raw and add the following content:
+
+	{
+		“firstName”:”Sachin”,
+		“middleName”:”Ramesh”,
+		“lastName”:”Tendulkar”,
+		“age”:47
+	}
+	
+
+
+#DELETE
+
+Let’s try to remove the user with id 3
+Open a new tab in Postman and run the query (http://localhost:3000/users/3) with the DELETE operation.
+The response is returned as empty {} object. 
+This indicates that the object with the respective id is successfully deleted
+
+If you make a GET call, you should only see 3 users now.
+
+#PATCH
+Let’s modify the first name of the record with id 2
+Open a new tab in Postman and run the query (http://localhost:3000/users/2) with the PATCH operation. 
+You need to set the header: Content-Type as application/json. 
+In the body, select the body type as raw and add the following content:
+	{
+		“firstName”: “Test”
+	}
+	
+If you make a GET call, you should only see the user with id 2 should have the first name as “Test”
