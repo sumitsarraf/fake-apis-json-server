@@ -10,6 +10,7 @@ Let’s go ahead and create a simple REST API that performs all CRUD operations-
 
 
 Open the db.json file and replace the content with the following:
+
 {
 	“users”: [
 				{
@@ -32,9 +33,13 @@ Open the db.json file and replace the content with the following:
 				}
 			]
 }
+
 Refresh the browser window where your local server is running. You should see only one resource: users with a count of 3.
+
 Open Postman and make a GET request- http://localhost:3000/users. You should 3 users as a result.Image for post
+
 You can also perform operations such as sorting, filtering, searching, etc. Below are some of the examples:
+
 * http://localhost:3000/users/2 (Returns the user with id-2)
 * http://localhost:3000/users?_limit=2 (Sets the limit to return 2 records)
 * http://localhost:3000/users?_sort=firstName&_order=desc (Sorts the records with the first name in descending order)
