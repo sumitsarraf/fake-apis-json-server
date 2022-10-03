@@ -91,6 +91,7 @@ This indicates that the object with the respective id is successfully deleted
 If you make a GET call, you should only see 3 users now.
 
 # PATCH
+
 Let’s modify the first name of the record with id 2
 Open a new tab in Postman and run the query (http://localhost:3000/users/2) with the PATCH operation. 
 You need to set the header: Content-Type as application/json. 
